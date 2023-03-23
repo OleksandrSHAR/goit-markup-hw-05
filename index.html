@@ -27,7 +27,9 @@
           >
           <ul class="list pages-nav header-flex">
             <li>
-              <a class="site-nav-ling link" href="./index.html">Studio</a>
+              <a class="site-nav-ling active-page link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li>
               <a class="site-nav-ling link" href="./portfolio.html">
@@ -61,9 +63,18 @@
       <section class="baner">
         <div class="conteiner">
           <h1 class="baner-titel">Effective Solutions for Your Business</h1>
-          <button class="button pointer button-baner" type="button">
+          <button class="button pointer button-baner" data-modal-open>
             Order Service
           </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="madal">
+            <button class="close" data-modal-close>
+              <svg class="close-item">
+                <use href="./images/symbol-defs.svg#icon-Vector"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!---------------------------BENEFITS----------------------->
@@ -466,5 +477,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
