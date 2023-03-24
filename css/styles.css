@@ -579,6 +579,8 @@ body {
   letter-spacing: 0.02em;
   color: var(--praimary-text-color);
 }
+.projects-overlay-item {
+}
 .overlay {
   position: relative;
 
@@ -602,6 +604,10 @@ body {
 
   transform: translateY(100%);
   transition: transform var(--time-transform);
+}
+
+.overlay-focus:focus .overlay-element {
+  transform: translateY(0);
 }
 .projects-list:hover .overlay-element {
   transform: translateY(0);
