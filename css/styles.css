@@ -11,6 +11,7 @@
   --color-green: #31d0aa;
 
   --border-color: #8e8f99;
+  --time-transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -43,6 +44,7 @@ body {
   position: relative;
   color: var(--title-text-color);
   height: 24px;
+  transition: var(--time-transform);
 }
 .active-page {
   color: var(--color-ocean);
@@ -51,10 +53,11 @@ body {
 .active-page::after {
   content: "";
   position: absolute;
-  bottom: -20px;
+
   left: 0;
   width: 100%;
   height: 4px;
+  top: 44px;
   background: var(--color-ocean);
 }
 .auth-nav-ling {
@@ -64,6 +67,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   align-items: center;
+  transition: var(--time-transform);
 }
 
 .pages-nav {
@@ -149,6 +153,7 @@ body {
   border-radius: 4px;
   padding: 16px 32px;
   margin: 0;
+  transition: var(--time-transform);
 }
 .button-baner:hover,
 .button-baner:focus {
@@ -191,6 +196,7 @@ body {
   border-color: rgba(0, 0, 0, 0.1);
   background-color: var(--footer-text-color);
   fill: #000;
+  transition: var(--time-transform);
 }
 .close:is(:hover, :focus) {
   background-color: var(--color-ocean);
@@ -351,6 +357,7 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: var(--time-transform);
 }
 .contacs-stail:is(:hover, :focus) {
   background-color: var(--color-ocean);
@@ -400,6 +407,7 @@ body {
   fill: var(--border-color);
 
   border-radius: 4px;
+  transition: var(--time-transform);
 }
 .customers-item :is(:hover, :focus) {
   border-color: var(--color-ocean);
@@ -472,6 +480,7 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: var(--time-transform);
 }
 .contacs-footer-stail:is(:hover, :focus) {
   background-color: var(--color-green);
@@ -506,6 +515,7 @@ body {
   border: 1px solid #e7e9fc;
 
   width: 360px;
+  transition: var(--time-transform);
 }
 .projects-list:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -535,6 +545,7 @@ body {
   letter-spacing: 0.04em;
   padding: 12px 24px;
   border-radius: 4px;
+  transition: var(--time-transform);
 }
 .portfolio-button:is(:hover, :focus) {
   background-color: var(--color-ocean);
@@ -567,6 +578,33 @@ body {
 
   letter-spacing: 0.02em;
   color: var(--praimary-text-color);
+}
+.overlay {
+  position: relative;
+
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+}
+.overlay-element {
+  position: absolute;
+  background-color: var(--color-ocean);
+  margin: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  line-height: 1.5;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 164px;
+  color: var(--accent-color);
+
+  transform: translateY(100%);
+  transition: transform var(--time-transform);
+}
+.projects-list:hover .overlay-element {
+  transform: translateY(0);
 }
 /*------------------------- Batton -------------------*/
 
